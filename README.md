@@ -75,3 +75,53 @@ And why is that? Well, because both in the research and in the production enviro
 So we need the steps of the pipeline that will allow us to produce the mature data with which we will be able to either train the model or once the model is train, obtain the predictions. I'm going to discuss the details of the different steps of the machine learning pipeline later on in Section four.
 
 For the rest of this section, we're going to focus on the concept of building reproducible machine learning pipelines.
+
+
+## Creating Machine Learning reproducible pipeline : 
+In this section we will focus on about building reproducible machine learning pipelines and why that matters.
+
+### What is deployment of machine learning model?
+The deployment of a machine learning model is the process of making our model available in production environments where they can provide predictions to other software systems.
+
+### Are the Machine learning model that we develop in Jupyter notebook means ML deployment ?
+The ML Model that we develop in our jupyter notebook are the models developed in the Jupyter notebook. We 
+do so in the so-called research environment.
+
+### What is a research environment?
+This is an isolated environment without contact to light data when the data scientist has the freedom to try and research the different models and find out a solution to a certain product need. In a common setting, we have historical data and we use this data to train a machine learning model, once we're happy with the performance of our model in the research environment, we're ready to migrate it to the production environment where it can receive input from life data and output predictions that can be used to make decisions.
+
+*We often talk about deployment of machine learning models when, in fact, we mean deployment of a machine learning pipeline.*
+
+### So what is a machine learning pipeline?
+
+It is the series of steps that need to occur from the moment we received the data up to the moment we obtain a prediction.
+
+- A typical machine learning pipeline includes a big proportion of feature transformation steps.</br>
+Perhaps this is even the biggest part of the pipeline.
+
+- Then it includes steps to train the machine learning mother and steps to output a prediction would create an entire pipeline in a research environment.
+
+- I would need to deploy as well the entire pipeline to the production environment.
+    - Why do we need to do?
+     Because in the light environment, we're also going to receive raw data as input and we need to transform it to create the necessary features so that the model can interpret them and return the prediction.
+- When we deploy our pipeline to production, we need to do it in a way so that the pipelines are reproducible.
+
+### When we deploy our pipeline to production, we need to do it in a way so that the pipelines are reproducible.What does this mean?
+
+It means that if both the pipeline in the research environment and the pipeline in the production environment receive the same raw data input, both pipelines should return this same protection, same data. Khamsin same output should come out of both pipelines.
+
+Why do you think the research phase of our project we built a model and we optimized its performance. Static maximizes the business value.
+
+When we develop a machine learning model for a machine learning pipeline, I should say we test model performance from a statistical perspective, utilizing classical metrics like the accuracy, the precision, recall, medium squared error and any other metric that you're familiar with. And we also evaluate metrics that translate these parameters into business value.For example, we may measure the increased revenue that our model will create or the increased customer satisfaction or any other measure that we're interested in, and that will vary with the organization.
+
+If we want to translate this value, this revenue increase, for example, as I show in this light from a research environment to the real life that is to the environment, we need to make sure that the like model reproduces.
+
+Exactly, or at least as much as possible in practice the that we created in the research environment. And this is why our models need to be reproducible.
+
+*So why is reproducibility matters first, if we cannot reproduce our machine learning pipelines within the research and production environments we may incur in financial costs, as I discussed in the previous life.*
+
+But we also incur in substantial time loss because we need to spend a lot of time trying to figure out why the models are not identical, or at least very similar. And these will end up in the loss of reputation of the theme. But more important for me, at least, is the fact that without the ability to replicate the model results exactly.
+
+It is very difficult to determine if a new model is truly better than the existing one. When we develop the machine learning model would usually compare it with the current model or set of rules that the organization is using without the ability to replicate the results.
+
+Exactly. It is very difficult to determine if the new model is truly better than the current one.
