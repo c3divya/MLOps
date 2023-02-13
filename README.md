@@ -118,7 +118,7 @@ If we want to translate this value, this revenue increase, for example, as I sho
 
 Exactly, or at least as much as possible in practice the that we created in the research environment. And this is why our models need to be reproducible.
 
-*So why is reproducibility matters first, if we cannot reproduce our machine learning pipelines within the research and production environments we may incur in financial costs, as I discussed in the previous life.*
+*So why is reproducibility matters first, if we cannot reproduce our machine learning pipelines within the research and production environments we may incur in financial costs.*
 
 But we also incur in substantial time loss because we need to spend a lot of time trying to figure out why the models are not identical, or at least very similar. And these will end up in the loss of reputation of the theme. But more important for me, at least, is the fact that without the ability to replicate the model results exactly.
 
