@@ -14,6 +14,7 @@ DATASET_DIR = PACKAGE_ROOT / "datasets"
 TRAINED_MODEL_DIR = PACKAGE_ROOT / "trained_models"
 
 
+#Look into pydantic library , it is been used for data validation
 class AppConfig(BaseModel):
     """
     Application-level config.

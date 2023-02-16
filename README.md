@@ -125,3 +125,52 @@ But we also incur in substantial time loss because we need to spend a lot of tim
 It is very difficult to determine if a new model is truly better than the existing one. When we develop the machine learning model would usually compare it with the current model or set of rules that the organization is using without the ability to replicate the results.
 
 Exactly. It is very difficult to determine if the new model is truly better than the current one.
+
+# Troubleshooting Tox
+
+If you are using Python 3.10/3.11, downgrade to Python 3.9
+
+
+
+For Windows users, when using tox, if you encounter an error like Could not install packages due to an EnvironmentError: [Errno 2] No such file or directory \\METADATA this is likely to be because of an annoying issue in Windows with the default max path lenghts. You have two options:
+
+1) Install the package to a shorter path
+
+2) Change your system max path length as explained here in the Python docs https://docs.python.org/3.7/using/windows.html#removing-the-max-path-limitation and in this stackoverflow answer https://stackoverflow.com/questions/54778630/could-not-install-packages-due-to-an-environmenterror-errno-2-no-such-file-or 
+
+---
+
+Run pip3 install wheel
+
+---
+
+If you are using the Windows Python installed from the Microsoft Store (which we recommend against), you need to add the tox scripts directory to your system PATH. You'll know this is the case because when you run pip install tox you'll see a warning similar to this:
+
+
+The Scripts directory will be of the format: 
+
+C:\Users\{username}\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\Scripts
+
+If you're using the Python install from the Microsoft Store you will also need to make sure you're using tox >4.0.0a8 to avoid this error: https://github.com/tox-dev/tox/issues/2202
+
+A catch here is that tox can get installed as tox4 (you can rename here: C:\Users\{YOUR_USERNAME}\AppData\Local\Packages\PythonSoftwareFoundation.{YOUR PYTHON VERSION}\LocalCache\local-packages\Python39\Scripts)
+
+If you are unable to run things with Tox (which hopefully shouldn't be the case), then you can run the Python commands you will find in the tox.ini file. However, in order to do this you must add the relevant directory (e.g. section-05, not just the root directory) to your system PYTHONPATH
+
+Here's how you do that on windows https://stackoverflow.com/questions/3701646/how-to-add-to-the-pythonpath-in-windows-so-it-finds-my-modules-packages 
+
+
+Here's how you do that on MacOS and Linux https://stackoverflow.com/questions/3402168/permanently-add-a-directory-to-pythonpath
+
+# Why shouldn't I just use python code for configuration
+[Reference Link](https://hitchdev.com/strictyaml/why-not/turing-complete-code/#:~:text=It%20also%20makes%20it%20easier,nightmare%20%2D%20just%20ask%20C%2B%2B%20programmers!)
+
+# Pydantic refer link
+[Reference Link 1](https://towardsdatascience.com/pydantic-688e897cfd3a)
+[Reference Link 2](https://docs.pydantic.dev/)
+
+
+
+# strictYAML refer link
+[Reference Link](https://pypi.org/project/strictyaml/0.2/)
+

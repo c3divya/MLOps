@@ -13,11 +13,13 @@ pipeline_name: regression_model
 pipeline_save_file: regression_model_output_v
 
 # Will cause syntax errors since they begin with numbers
+# nested dictionary
 variables_to_rename:
   1stFlrSF: FirstFlrSF
   2ndFlrSF: SecondFlrSF
   3SsnPorch: ThreeSsnPortch
 
+# Intendention matters in yml and here a key with intended dash is the list 
 features:
   - MSSubClass
   - MSZoning
