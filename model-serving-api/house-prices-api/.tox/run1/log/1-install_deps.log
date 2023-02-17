@@ -1,0 +1,107 @@
+name: run1
+run_id: install_deps
+env TERM: xterm-256color
+env TMPDIR: /var/folders/86/qgnjxy796qn4qx_nlvqn4mkc0000gn/T/
+env HOME: /Users/divya_gandhi
+env PATH: /Users/divya_gandhi/Documents/Learnings/MLOps/model-serving-api/house-prices-api/.tox/test_app/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin
+env PYTHONHASHSEED: 2657160430
+env PIP_DISABLE_PIP_VERSION_CHECK: 1
+env PYTHONIOENCODING: utf-8
+env PYTHONPATH: .
+env TOX_ENV_NAME: run1
+env TOX_WORK_DIR: /Users/divya_gandhi/Documents/Learnings/MLOps/model-serving-api/house-prices-api/.tox
+env TOX_ENV_DIR: /Users/divya_gandhi/Documents/Learnings/MLOps/model-serving-api/house-prices-api/.tox/test_app
+env VIRTUAL_ENV: /Users/divya_gandhi/Documents/Learnings/MLOps/model-serving-api/house-prices-api/.tox/test_app
+env COLUMNS: 104
+env LINES: 32
+metadata pid: 44732
+cwd: /Users/divya_gandhi/Documents/Learnings/MLOps/model-serving-api/house-prices-api
+allow: /Users/divya_gandhi/Documents/Learnings/MLOps/model-serving-api/house-prices-api/.tox/test_app/bin/*
+cmd: pip install -r test_requirements.txt
+exit_code: 0
+Collecting uvicorn<0.30.0,>=0.20.0
+  Using cached uvicorn-0.20.0-py3-none-any.whl (56 kB)
+Collecting fastapi<1.0.0,>=0.88.0
+  Using cached fastapi-0.92.0-py3-none-any.whl (56 kB)
+Collecting python-multipart<0.1.0,>=0.0.5
+  Using cached python_multipart-0.0.5-py3-none-any.whl
+Collecting pydantic<1.12.0,>=1.10.4
+  Using cached pydantic-1.10.5-cp310-cp310-macosx_10_9_x86_64.whl (2.8 MB)
+Collecting typing_extensions<5.0.0,>=4.2.0
+  Using cached typing_extensions-4.5.0-py3-none-any.whl (27 kB)
+Collecting loguru<1.0.0,>=0.5.3
+  Using cached loguru-0.6.0-py3-none-any.whl (58 kB)
+Collecting tid-regression-model>=3.2.0
+  Using cached tid_regression_model-3.2.0-py3-none-any.whl (191 kB)
+Collecting pytest<8.0.0,>=7.2.0
+  Using cached pytest-7.2.1-py3-none-any.whl (317 kB)
+Collecting requests<2.50.0,>=2.28.0
+  Using cached requests-2.28.2-py3-none-any.whl (62 kB)
+Collecting httpx<0.50.0,>=0.23.2
+  Using cached httpx-0.23.3-py3-none-any.whl (71 kB)
+Collecting h11>=0.8
+  Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Collecting click>=7.0
+  Using cached click-8.1.3-py3-none-any.whl (96 kB)
+Collecting starlette<0.26.0,>=0.25.0
+  Using cached starlette-0.25.0-py3-none-any.whl (66 kB)
+Collecting six>=1.4.0
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting joblib<2.0.0,>=1.0.1
+  Using cached joblib-1.2.0-py3-none-any.whl (297 kB)
+Collecting ruamel.yaml<1.0.0,>=0.16.12
+  Using cached ruamel.yaml-0.17.21-py3-none-any.whl (109 kB)
+Collecting pandas<2.0.0,>=1.3.5
+  Using cached pandas-1.5.3-cp310-cp310-macosx_10_9_x86_64.whl (12.0 MB)
+Collecting strictyaml<2.0.0,>=1.3.2
+  Using cached strictyaml-1.6.2-py3-none-any.whl
+Collecting feature-engine<2.0.0,>=1.0.2
+  Using cached feature_engine-1.5.2-py2.py3-none-any.whl (290 kB)
+Collecting numpy<2.0.0,>=1.21.0
+  Using cached numpy-1.24.2-cp310-cp310-macosx_10_9_x86_64.whl (19.8 MB)
+Collecting scikit-learn<2.0.0,>=1.1.3
+  Using cached scikit_learn-1.2.1-cp310-cp310-macosx_10_9_x86_64.whl (9.1 MB)
+Collecting pluggy<2.0,>=0.12
+  Using cached pluggy-1.0.0-py2.py3-none-any.whl (13 kB)
+Collecting exceptiongroup>=1.0.0rc8
+  Using cached exceptiongroup-1.1.0-py3-none-any.whl (14 kB)
+Collecting attrs>=19.2.0
+  Using cached attrs-22.2.0-py3-none-any.whl (60 kB)
+Collecting packaging
+  Using cached packaging-23.0-py3-none-any.whl (42 kB)
+Collecting iniconfig
+  Using cached iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Collecting tomli>=1.0.0
+  Using cached tomli-2.0.1-py3-none-any.whl (12 kB)
+Collecting charset-normalizer<4,>=2
+  Using cached charset_normalizer-3.0.1-cp310-cp310-macosx_10_9_x86_64.whl (124 kB)
+Collecting idna<4,>=2.5
+  Using cached idna-3.4-py3-none-any.whl (61 kB)
+Collecting certifi>=2017.4.17
+  Using cached certifi-2022.12.7-py3-none-any.whl (155 kB)
+Collecting urllib3<1.27,>=1.21.1
+  Using cached urllib3-1.26.14-py2.py3-none-any.whl (140 kB)
+Collecting httpcore<0.17.0,>=0.15.0
+  Using cached httpcore-0.16.3-py3-none-any.whl (69 kB)
+Collecting rfc3986[idna2008]<2,>=1.3
+  Using cached rfc3986-1.5.0-py2.py3-none-any.whl (31 kB)
+Collecting sniffio
+  Using cached sniffio-1.3.0-py3-none-any.whl (10 kB)
+Collecting statsmodels>=0.11.1
+  Using cached statsmodels-0.13.5-cp310-cp310-macosx_10_9_x86_64.whl (9.7 MB)
+Collecting scipy>=1.4.1
+  Using cached scipy-1.10.0-cp310-cp310-macosx_10_15_x86_64.whl (35.1 MB)
+Collecting anyio<5.0,>=3.0
+  Using cached anyio-3.6.2-py3-none-any.whl (80 kB)
+Collecting pytz>=2020.1
+  Using cached pytz-2022.7.1-py2.py3-none-any.whl (499 kB)
+Collecting python-dateutil>=2.8.1
+  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Collecting ruamel.yaml.clib>=0.2.6
+  Using cached ruamel.yaml.clib-0.2.7-cp310-cp310-macosx_10_9_universal2.whl (141 kB)
+Collecting threadpoolctl>=2.0.0
+  Using cached threadpoolctl-3.1.0-py3-none-any.whl (14 kB)
+Collecting patsy>=0.5.2
+  Using cached patsy-0.5.3-py2.py3-none-any.whl (233 kB)
+Installing collected packages: rfc3986, pytz, charset-normalizer, urllib3, typing_extensions, tomli, threadpoolctl, sniffio, six, ruamel.yaml.clib, pluggy, packaging, numpy, loguru, joblib, iniconfig, idna, h11, exceptiongroup, click, certifi, attrs, uvicorn, scipy, ruamel.yaml, requests, python-multipart, python-dateutil, pytest, pydantic, patsy, anyio, strictyaml, starlette, scikit-learn, pandas, httpcore, statsmodels, httpx, fastapi, feature-engine, tid-regression-model
+Successfully installed anyio-3.6.2 attrs-22.2.0 certifi-2022.12.7 charset-normalizer-3.0.1 click-8.1.3 exceptiongroup-1.1.0 fastapi-0.92.0 feature-engine-1.5.2 h11-0.14.0 httpcore-0.16.3 httpx-0.23.3 idna-3.4 iniconfig-2.0.0 joblib-1.2.0 loguru-0.6.0 numpy-1.24.2 packaging-23.0 pandas-1.5.3 patsy-0.5.3 pluggy-1.0.0 pydantic-1.10.5 pytest-7.2.1 python-dateutil-2.8.2 python-multipart-0.0.5 pytz-2022.7.1 requests-2.28.2 rfc3986-1.5.0 ruamel.yaml-0.17.21 ruamel.yaml.clib-0.2.7 scikit-learn-1.2.1 scipy-1.10.0 six-1.16.0 sniffio-1.3.0 starlette-0.25.0 statsmodels-0.13.5 strictyaml-1.6.2 threadpoolctl-3.1.0 tid-regression-model-3.2.0 tomli-2.0.1 typing_extensions-4.5.0 urllib3-1.26.14 uvicorn-0.20.0
