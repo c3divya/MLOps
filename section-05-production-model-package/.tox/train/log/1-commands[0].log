@@ -1,7 +1,7 @@
 name: train
 run_id: commands[0]
-env TERM: xterm-256color
 env TMPDIR: /var/folders/86/qgnjxy796qn4qx_nlvqn4mkc0000gn/T/
+env TERM: xterm-256color
 env HOME: /Users/divya_gandhi
 env PATH: /Users/divya_gandhi/Documents/Learnings/MLOps/section-05-production-model-package/.tox/test_package/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin
 env PIP_DISABLE_PIP_VERSION_CHECK: 1
@@ -12,27 +12,10 @@ env TOX_ENV_NAME: train
 env TOX_WORK_DIR: /Users/divya_gandhi/Documents/Learnings/MLOps/section-05-production-model-package/.tox
 env TOX_ENV_DIR: /Users/divya_gandhi/Documents/Learnings/MLOps/section-05-production-model-package/.tox/test_package
 env VIRTUAL_ENV: /Users/divya_gandhi/Documents/Learnings/MLOps/section-05-production-model-package/.tox/test_package
-env COLUMNS: 104
-env LINES: 32
-metadata pid: 25784
+env COLUMNS: 78
+env LINES: 22
+metadata pid: 67851
 cwd: /Users/divya_gandhi/Documents/Learnings/MLOps/section-05-production-model-package
 allow: /Users/divya_gandhi/Documents/Learnings/MLOps/section-05-production-model-package/.tox/test_package/bin/*
 cmd: python regression_model/train_pipeline.py
-exit_code: 1
-
-standard error:
-Traceback (most recent call last):
-  File "/Users/divya_gandhi/Documents/Learnings/MLOps/section-05-production-model-package/regression_model/train_pipeline.py", line 2, in <module>
-    from config.core import config
-  File "/Users/divya_gandhi/Documents/Learnings/MLOps/section-05-production-model-package/regression_model/config/core.py", line 7, in <module>
-    import regression_model
-  File "/Users/divya_gandhi/Documents/Learnings/MLOps/section-05-production-model-package/regression_model/__init__.py", line 3, in <module>
-    from regression_model.config.core import PACKAGE_ROOT, config
-  File "/Users/divya_gandhi/Documents/Learnings/MLOps/section-05-production-model-package/regression_model/config/core.py", line 100, in <module>
-    config = create_and_validate_config()
-  File "/Users/divya_gandhi/Documents/Learnings/MLOps/section-05-production-model-package/regression_model/config/core.py", line 94, in create_and_validate_config
-    model_config=ModelConfig(**parsed_config.data),
-  File "pydantic/main.py", line 342, in pydantic.main.BaseModel.__init__
-pydantic.error_wrappers.ValidationError: 1 validation error for ModelConfig
-ref_var
-  value is not a valid integer (type=type_error.integer)
+exit_code: 0

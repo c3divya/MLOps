@@ -1,0 +1,61 @@
+name: run1
+run_id: commands[0]
+env TMPDIR: /var/folders/86/qgnjxy796qn4qx_nlvqn4mkc0000gn/T/
+env TERM: xterm-256color
+env HOME: /Users/divya_gandhi
+env PATH: /Users/divya_gandhi/Documents/Learnings/MLOps/model-serving-api/house-prices-api/.tox/test_app/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin
+env PYTHONHASHSEED: 3003237708
+env PIP_DISABLE_PIP_VERSION_CHECK: 1
+env PYTHONIOENCODING: utf-8
+env PYTHONPATH: .
+env TOX_ENV_NAME: run1
+env TOX_WORK_DIR: /Users/divya_gandhi/Documents/Learnings/MLOps/model-serving-api/house-prices-api/.tox
+env TOX_ENV_DIR: /Users/divya_gandhi/Documents/Learnings/MLOps/model-serving-api/house-prices-api/.tox/test_app
+env VIRTUAL_ENV: /Users/divya_gandhi/Documents/Learnings/MLOps/model-serving-api/house-prices-api/.tox/test_app
+env COLUMNS: 78
+env LINES: 22
+metadata pid: 9778
+cwd: /Users/divya_gandhi/Documents/Learnings/MLOps/model-serving-api/house-prices-api
+allow: /Users/divya_gandhi/Documents/Learnings/MLOps/model-serving-api/house-prices-api/.tox/test_app/bin/*
+cmd: python app/main.py
+exit_code: 0
+[32mINFO[0m:     ::1:53555 - "[1mGET / HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     ::1:53556 - "[1mGET /docs HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     ::1:53556 - "[1mGET /api/v1/openapi.json HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     ::1:53559 - "[1mGET /health HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     ::1:53561 - "[1mGET /docs/health HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     ::1:53563 - "[1mGET /health HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     ::1:53563 - "[1mGET /health HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     ::1:53563 - "[1mGET /health HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     ::1:53565 - "[1mGET /api/v1/health HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     ::1:53572 - "[1mGET /api/v1/predict HTTP/1.1[0m" [31m405 Method Not Allowed[0m
+
+standard error:
+/Users/divya_gandhi/Documents/Learnings/MLOps/model-serving-api/house-prices-api/.tox/test_app/lib/python3.10/site-packages/sklearn/base.py:299: UserWarning: Trying to unpickle estimator Binarizer from version 1.2.0 when using version 1.2.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/divya_gandhi/Documents/Learnings/MLOps/model-serving-api/house-prices-api/.tox/test_app/lib/python3.10/site-packages/sklearn/base.py:299: UserWarning: Trying to unpickle estimator MinMaxScaler from version 1.2.0 when using version 1.2.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/divya_gandhi/Documents/Learnings/MLOps/model-serving-api/house-prices-api/.tox/test_app/lib/python3.10/site-packages/sklearn/base.py:299: UserWarning: Trying to unpickle estimator Lasso from version 1.2.0 when using version 1.2.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/divya_gandhi/Documents/Learnings/MLOps/model-serving-api/house-prices-api/.tox/test_app/lib/python3.10/site-packages/sklearn/base.py:299: UserWarning: Trying to unpickle estimator Pipeline from version 1.2.0 when using version 1.2.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+[32m2023-02-20 11:53:14.439[0m | [33m[1mWARNING [0m | [36m__main__[0m:[36m<module>[0m:[36m55[0m - [33m[1mRunning in development mode. Do not run like this in production.[0m
+[32mINFO[0m:     Started server process [[36m9778[0m]
+[32mINFO[0m:     Waiting for application startup.
+[32mINFO[0m:     Application startup complete.
+[32mINFO[0m:     Uvicorn running on [1mhttp://localhost:8001[0m (Press CTRL+C to quit)
+[32mINFO[0m:     Shutting down
+[32mINFO[0m:     Finished server process [[36m9778[0m]
+[31mERROR[0m:    Traceback (most recent call last):
+  File "/Users/divya_gandhi/Documents/Learnings/MLOps/model-serving-api/house-prices-api/.tox/test_app/lib/python3.10/site-packages/starlette/routing.py", line 674, in lifespan
+    await receive()
+  File "/Users/divya_gandhi/Documents/Learnings/MLOps/model-serving-api/house-prices-api/.tox/test_app/lib/python3.10/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+  File "/usr/local/Cellar/python@3.10/3.10.9/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/queues.py", line 159, in get
+    await getter
+asyncio.exceptions.CancelledError
+
