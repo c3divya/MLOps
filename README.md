@@ -267,10 +267,10 @@ Which file to include in the package.
 Generating distribution archives¶
 
 # FastAPI
-[FASTAPI reference LINK](https://fastapi.tiangolo.com/)
-[ASYNC and AWAIT Link](https://fastapi.tiangolo.com/async/#in-a-hurry)
-[APP ROUTER LINK](https://fastapi.tiangolo.com/tutorial/bigger-applications/)
-[Fast API features](https://fastapi.tiangolo.com/tutorial/first-steps/)
+[FASTAPI reference LINK](https://fastapi.tiangolo.com/) <br>
+[ASYNC and AWAIT Link](https://fastapi.tiangolo.com/async/#in-a-hurry)<br>
+[APP ROUTER LINK](https://fastapi.tiangolo.com/tutorial/bigger-applications/)<br>
+[Fast API features](https://fastapi.tiangolo.com/tutorial/first-steps/)<br>
 
 
 
