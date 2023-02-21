@@ -126,6 +126,91 @@ It is very difficult to determine if a new model is truly better than the existi
 
 Exactly. It is very difficult to determine if the new model is truly better than the current one.
 
+# Tox Code Input
+```
+[tox]
+```
+The [tox] section of the tox.ini file contains global configuration options for Tox,
+which apply to all environments. In this case, min_version = 4 specifies the
+minimum version of Tox that is required to run the configuration file.
+The envlist option specifies a list of environments to create, separated by commas. 
+In this case, two environments are defined: test_package and checks.
+The skipsdist option specifies whether to skip creating a source distribution 
+package for each environment. If skipsdist = True, 
+Tox will not create a source distribution package. 
+This can be useful if you are only interested in running tests or other commands, 
+and don't need to create a package.
+
+```
+[testenv:test_package]
+```
+The [testenv:test_package] section of the tox.ini file defines an environment called test_package, 
+which is one of the environments listed in the envlist option in the [tox] section.
+
+The envdir option specifies the directory where the virtual environment for this environment will be created. 
+In this case, it is set to {toxworkdir}/test_package, which means the virtual environment will be created in a 
+subdirectory called test_package under the .tox directory.
+
+The deps option specifies a list of dependencies that will be installed in the virtual environment for this environment.
+The -r option indicates that the dependencies will be read from a file, which is specified by {toxinidir}/requirements/test_requirements.txt. 
+This file is a list of Python packages required to run the tests for the regression_model package.
+
+The commands option specifies a list of commands that will be run when this environment is activated. 
+In this case, two commands are specified. 
+First, it will run the train_pipeline.py script in the regression_model package. 
+Then it will run the pytest command with some options,
+ including -s to show output from print() statements,
+ -vv for more verbose output, 
+ and {posargs:tests/} to run tests in the tests/ directory by default, or other directories specified by additional arguments.
+
+
+```
+[testenv:train]
+```
+Specifying a test environment called 'train'
+
+envdir: This sets the directory where the test environment will be created.
+In this case, it's set to {toxworkdir}/test_package, which means that Tox will create the environment in a subdirectory called test_package 
+within the directory specified by toxworkdir. toxworkdir is a built-in variable that points to the directory where Tox will create its temporary files.
+
+deps: This specifies the dependencies for the 'train' environment. 
+It is inheriting from another environment called 'test_package', which means that the dependencies 
+listed in the 'deps' section of the 'test_package' environment will also be installed in the 'train' environment. 
+This is achieved using the syntax {[testenv:test_package]deps}, which references the 'deps' section of the 'test_package' environment.
+
+commands: This specifies the commands that Tox should run in the 'train' environment. 
+In this case, it's running a Python script called train_pipeline.py that is located in the regression_model directory.
+This script is presumably used to train a regression model.
+
+```
+[testenv:checks]
+```
+envdir: This sets the directory where the test environment will be created. In this case, it's set to {toxworkdir}/checks, 
+which means that Tox will create the environment in a subdirectory called checks within the directory specified by toxworkdir. 
+toxworkdir is a built-in variable that points to the directory where Tox will create its temporary files.
+
+deps: This specifies the dependencies for the 'checks' environment. 
+It's installing the dependencies from the file located at {toxinidir}/requirements/typing_requirements.txt using the -r option.
+toxinidir is a built-in variable that points to the root directory of the project. 
+The typing_requirements.txt file presumably contains the requirements needed for type checking the code, such as mypy.
+
+commands: This specifies the commands that Tox should run in the 'checks' environment.
+ In this case, it's running a series of tools to check the code quality. Here's what each of the commands does:
+
+flake8: This is a code linter that checks for syntax errors, code style issues, and 
+other potential problems in the code. It's checking the regression_model and tests directories.
+
+isort: This is a tool that sorts the import statements in Python code according to a defined style. 
+It's checking the regression_model and tests directories.
+
+black: This is a code formatter that reformats the code to adhere to a consistent style.
+ It's checking the regression_model and tests directories.
+
+{posargs:mypy regression_model}: This is running the mypy tool to perform static type checking on the code in the regression_model directory. 
+The {posargs} syntax allows for additional arguments to be passed to the command line when running tox, such as specific files or directories to check.
+ If no arguments are provided, it defaults to checking the regression_model directory.
+
+
 # Troubleshooting Tox
 
 If you are using Python 3.10/3.11, downgrade to Python 3.9
@@ -173,4 +258,18 @@ Here's how you do that on MacOS and Linux https://stackoverflow.com/questions/34
 
 # strictYAML refer link
 [Reference Link](https://pypi.org/project/strictyaml/0.2/)
+
+# Manifest.ini
+Which file to include in the package.
+
+# Link for building the pacakage
+[Reference Link](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
+Generating distribution archives¶
+
+# FastAPI
+[FASTAPI reference LINK](https://fastapi.tiangolo.com/) <br>
+[ASYNC and AWAIT Link](https://fastapi.tiangolo.com/async/#in-a-hurry)<br>
+[APP ROUTER LINK](https://fastapi.tiangolo.com/tutorial/bigger-applications/)<br>
+[Fast API features](https://fastapi.tiangolo.com/tutorial/first-steps/)<br>
+
 
