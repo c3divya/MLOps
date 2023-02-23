@@ -272,6 +272,10 @@ Generating distribution archives¶
 [APP ROUTER LINK](https://fastapi.tiangolo.com/tutorial/bigger-applications/)<br>
 [Fast API features](https://fastapi.tiangolo.com/tutorial/first-steps/)<br>
 
+# GemFury
+[Create account on GemFury](https://gemfury.com/)
+[Private Index URL Format](https://gemfury.com/help/pypi-server/)
+
 
 
 
